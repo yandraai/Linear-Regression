@@ -11,9 +11,9 @@ Question 1
   Repeat the steps above to generate (k+1)-feature models from the k-feature models until the following situation arises: all the (k+1)-feature models have an AIC value higher than the AIC value of the k-feature model from which they are being generated. Stop the process and report the k-feature model found as being the best regression model for this data. 
   Report the features included, their coefficients, and p-values for the coefficients. Comment on the magnitudes of the p-values.
   
-  -```
+  ```
    hfdshhdjsh
-   ```
+  ```
   
   
   
