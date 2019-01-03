@@ -70,6 +70,9 @@ Question 1
  Question 2
 ------------ 
 - Report the features included, their coefficients, and p-values for the coefficients in the best model found above. Comment on the magnitudes of the p-values.  
+
+  >8- Feature Regression model best fitting to the data with optimal R2 and AIC value is:
+  >Best Feature with highest r2 value: alcohol+volatile_acidity+residual_sugar+free_sulfur_dioxide+density+pH+sulphates+fixed_acidity R2_Value: 0.2818 AIC_Value: 11106.287754
   
   P_Value:  The p-values for the coefficients indicate whether these relationships are statistically significant. 
             Along with the coefficients, p values provide enough evidence to reject the otherwise taken null hypothesis instead of the regression line obtained.
@@ -77,12 +80,18 @@ Question 1
   [hyperlink](p Values Explained):http://blog.minitab.com/blog/adventures-in-statistics-2/how-to-interpret-regression-analysis-results-p-values-and-coefficients 
     
 	In our model all the pvalues are almost equal to 0.00 which means that they are all very much significant in regression model and contribute in the prediction.
-     ![alt text](http://url/to/img.png)
-  
-  
-  >8- Feature Regression model best fitting to the data with optimal R2 and AIC value is:
-  >Best Feature with highest r2 value: alcohol+volatile_acidity+residual_sugar+free_sulfur_dioxide+density+pH+sulphates+fixed_acidity R2_Value: 0.2818 AIC_Value: 11106.287754
-  
+
+ Question 3
+------------ 	
+-Find the five wines that have the largest magnitudes of difference between the predicted and the actual wine-quality values. Look at the regression model, the rest of the data, and comment on why you think these wines are outliers.
+  #Fitting the obtained Regression line on the data to predict the value:
+	```
+	pred=bestlm[7].predict(X_Val)
+	error=abs(pred)
+	
+	```
+  The quality groups of 3,9 are only 25 among the 4898. The very little proportion of these stay as the outliers providing very little learning data for the regression models. 
+  If the model is fitted to include these as well, it would lead to overfitting of the data.
 
 
 	
