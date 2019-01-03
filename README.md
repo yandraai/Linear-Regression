@@ -79,7 +79,8 @@ Question 1
   P_Value:  The p-values for the coefficients indicate whether these relationships are statistically significant. 
             Along with the coefficients, p values provide enough evidence to reject the otherwise taken null hypothesis instead of the regression line obtained.
 			
-        A higher Pvalue indicate that the variable is not significant for the regression model, whereas a lower magnitude provides enough evidence that the inclusion of the variable is significant for the regression model and that the target value is dependent on the variable.
+        A higher Pvalue indicate that the variable is not significant for the regression model, whereas a lower magnitude 
+		provides enough evidence that the inclusion of the variable is significant for the regression model and that the target value is dependent on the variable.
 		
   ![hyperlink](p Values Explained):http://blog.minitab.com/blog/adventures-in-statistics-2/how-to-interpret-regression-analysis-results-p-values-and-coefficients 
     
@@ -92,8 +93,8 @@ Question 1
  #Fitting the obtained Regression line on the data to predict the value:
 	
 	```
-	pred=bestlm[7].predict(X_Val)
-	error=abs(pred)
+	  pred=bestlm[7].predict(X_Val)
+	  error=abs(pred)
 	```
   
   The quality groups of 3,9 are only 25 among the 4898. The very little proportion of these stay as the outliers providing very little learning data for the regression models. 
