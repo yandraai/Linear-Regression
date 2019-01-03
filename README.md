@@ -12,6 +12,7 @@ Question 1
   
    R2_Value :: R-squared is a statistical measure of how close the data are to the fitted regression line. 
               It is also known as the coefficient of determination, or the coefficient of multiple determination for multiple regression. 
+			  
 		Higher the R-squared value, the better the model fits the data.	  
   
   [hyperlink](R-squared Explained): http://blog.minitab.com/blog/adventures-in-statistics-2/regression-analysis-how-do-i-interpret-r-squared-and-assess-the-goodness-of-fit
@@ -19,6 +20,7 @@ Question 1
    AIC_Value :: The Akaike information criterion (AIC) is an estimator of the relative quality of statistical models for a given set of data. 
                 Given a collection of models for the data, AIC estimates the quality of each model, relative to each of the other models. 
 				Thus, AIC provides a means for model selection.
+				
 		Lower AIC value indicates a better fitting model for the given data.		
   
   [hyperlink](AIC Explained): http://blog.minitab.com/blog/adventures-in-statistics-2/regression-analysis-how-do-i-interpret-r-squared-and-assess-the-goodness-of-fit
@@ -76,7 +78,9 @@ Question 1
   
   P_Value:  The p-values for the coefficients indicate whether these relationships are statistically significant. 
             Along with the coefficients, p values provide enough evidence to reject the otherwise taken null hypothesis instead of the regression line obtained.
+			
         A higher Pvalue indicate that the variable is not significant for the regression model, whereas a lower magnitude provides enough evidence that the inclusion of the variable is significant for the regression model and that the target value is dependent on the variable.
+		
   [hyperlink](p Values Explained):http://blog.minitab.com/blog/adventures-in-statistics-2/how-to-interpret-regression-analysis-results-p-values-and-coefficients 
     
 	In our model all the pvalues are almost equal to 0.00 which means that they are all very much significant in regression model and contribute in the prediction.
@@ -88,7 +92,6 @@ Question 1
 	```
 	pred=bestlm[7].predict(X_Val)
 	error=abs(pred)
-	
 	```
   The quality groups of 3,9 are only 25 among the 4898. The very little proportion of these stay as the outliers providing very little learning data for the regression models. 
   If the model is fitted to include these as well, it would lead to overfitting of the data.
