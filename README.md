@@ -15,7 +15,7 @@ Question 1
 			  
 		Higher the R-squared value, the better the model fits the data.	  
   
-  [hyperlink](R-squared Explained): http://blog.minitab.com/blog/adventures-in-statistics-2/regression-analysis-how-do-i-interpret-r-squared-and-assess-the-goodness-of-fit
+  ![hyperlink](R-squared Explained): http://blog.minitab.com/blog/adventures-in-statistics-2/regression-analysis-how-do-i-interpret-r-squared-and-assess-the-goodness-of-fit
   
    AIC_Value :: The Akaike information criterion (AIC) is an estimator of the relative quality of statistical models for a given set of data. 
                 Given a collection of models for the data, AIC estimates the quality of each model, relative to each of the other models. 
@@ -23,7 +23,7 @@ Question 1
 				
 		Lower AIC value indicates a better fitting model for the given data.		
   
-  [hyperlink](AIC Explained): http://blog.minitab.com/blog/adventures-in-statistics-2/regression-analysis-how-do-i-interpret-r-squared-and-assess-the-goodness-of-fit
+  ![hyperlink](AIC Explained): http://blog.minitab.com/blog/adventures-in-statistics-2/regression-analysis-how-do-i-interpret-r-squared-and-assess-the-goodness-of-fit
    
   
   ```
@@ -81,18 +81,21 @@ Question 1
 			
         A higher Pvalue indicate that the variable is not significant for the regression model, whereas a lower magnitude provides enough evidence that the inclusion of the variable is significant for the regression model and that the target value is dependent on the variable.
 		
-  [hyperlink](p Values Explained):http://blog.minitab.com/blog/adventures-in-statistics-2/how-to-interpret-regression-analysis-results-p-values-and-coefficients 
+  ![hyperlink](p Values Explained):http://blog.minitab.com/blog/adventures-in-statistics-2/how-to-interpret-regression-analysis-results-p-values-and-coefficients 
     
 	In our model all the pvalues are almost equal to 0.00 which means that they are all very much significant in regression model and contribute in the prediction.
 
  Question 3
 ------------ 	
 -Find the five wines that have the largest magnitudes of difference between the predicted and the actual wine-quality values. Look at the regression model, the rest of the data, and comment on why you think these wines are outliers.
-  #Fitting the obtained Regression line on the data to predict the value:
+ 
+ #Fitting the obtained Regression line on the data to predict the value:
+	
 	```
 	pred=bestlm[7].predict(X_Val)
 	error=abs(pred)
 	```
+  
   The quality groups of 3,9 are only 25 among the 4898. The very little proportion of these stay as the outliers providing very little learning data for the regression models. 
   If the model is fitted to include these as well, it would lead to overfitting of the data.
 
